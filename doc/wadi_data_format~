@@ -1,0 +1,111 @@
+{
+	u'warranty': u'12 month(s) warranty', 
+	u'totalSellers': 1, 
+	u'color': u'', 
+	u'updated_at': u'2016-05-03T06:49:43+0000', 
+	u'visible': 1, 
+	u'link': u'samsung-40-inches-full-hd-slim-led-tv-40j5100-46026.html', 
+	u'maxImages': 3, 
+	u'badges': [], 
+	u'groupSize': u'', 
+	u'sku': u'SA766EL73QCG', 
+	u'highlights': [], 
+	u'categories': 
+		[u'electronics', u'electronics-tv_audio', u'electronics-tv_audio-televisions', u'electronics-tv_audio-televisions-led_lcd_tvs'], 
+	u'offerPrice': 1163, 
+	u'groupColor': u'Black', 
+	u'price': 1292, u'specialPrice': 1163, 
+	u'category': u'electronics-tv_audio-televisions-led_lcd_tvs', 
+	u'description': 
+		[
+			{u'text': u'A new 40J5100 TV from Samsung comes with 40 inch Full HD LED display and it has a Screen Capture feature which lets you capture your favorite TV moments on the screen at the push of a button. This TV will take your movie watching experience to a whole new level.', u'type': u'introduction', u'title': u''}, 
+			{u'text': u'This smart TV comes with a slim and VNB bezel which is accompanied by a lustrous black 40inch screen that looks magnificent, irrespective of whether it is turned on or off. Its gorgeous design comes with slender dimensions of 889 x 508 x 50.8 mm and weight is 7.5 kg without stand.', u'title': u'Slim and VNB Bezel design'}, 
+			{u'text': u'This smart TV from Samsung comes with 40 inch FHD display, having resolution of 1920 x 1080 pixels which you can experience crystal-clear programming from your TV. It has a LED backlight technology which delivers brighter images with vibrant color compared to LCD TVs.', u'title': u'40 inch FHD Display'}, 
+			{u'text': u'This smart TV comes with LED backlight technology delivers brighter images with vibrant color compared to traditional TVs. You can simply plug your USB memory drive or HDD into the TV and instantaneously enjoy movies, photos or music.', u'title': u'Other Features'}
+		], 
+	u'brand': {u'url': u'samsung.jpg', u'name': u'Samsung', u'key': u'samsung'}, 
+	u'name_desc': {u'brand': u'Samsung', u'subtitle': u'', u'name': u'40 inches Full HD Slim LED TV 40J5100'}, 
+	u'discount': 9, 
+	u'returnable': 1, 
+	u'minPrice': 1163, 
+	u'simples': 
+		[
+			{
+				u'specialPrice': 1163, 
+				u'sku': u'SA766EL73QCG-72595', 
+				u'deliveryTimeMin': 2, 
+				u'suppliers': 
+					[
+						{
+							u'shipping_time_max': 5, 
+							u'availableQty': 10, 
+							u'updated_at': u'2015-12-07T07:24:43+0000', 
+							u'warranty_period': u'12 month(s) warranty', 
+							u'delivery_time_max': 6, 
+							u'shipping_time_min': 3, 
+							u'specialPrice': 1163, 
+							u'price': 1292, 
+							u'vendor_code': u'V00010', 
+							u'visibility': 1, 
+							u'discount': 9, 
+							u'supplier_name': u'WADI Retail', 
+							u'releasedQty': 2, 
+							u'delivery_time': 4, 
+							u'delivery_time_min': 3, 
+							u'vendor_rating': 4, 
+							u'special_from_date': u'0000-00-00T00:00:00+0000', 
+							u'vendor_rank': 2, 
+							u'special_to_date': u'0000-00-00T00:00:00+0000', 
+							u'reservedQty': 2, 
+							u'catalog_tag': None, 
+							u'hide_if_out_of_stock': 0
+						}
+					], 
+				u'bids': u'W1315145299', 
+				u'updated_at': u'2016-03-24T19:50:06+0000', 
+				u'discount': 9, 
+				u'barcode_ean': u'', 
+				u'deliveryTimeMax': 4, 
+				u'order_date': u'2015-12-19 16:31:08', 
+				u'quantity': 12, u'price': 1292, u'size': u'OS'
+			}
+		], 
+	u'name': u'Samsung 40 inches Full HD Slim LED TV 40J5100', 
+	u'sizes': [u'OS'], 
+	u'attributesMap': 
+		{
+			u'key': u'electronics-tv_audio-televisions-led_lcd_tvs', 
+			u'groups': {
+				u'General Features': {
+					u'attributes': {
+						u'model_name': {
+							u'value': u'Full HD Slim LED Television', 
+							u'label': u'Model Name'
+						}, 
+						u'model_number': {
+							u'value': u'40J5100', u'label': u'Model Number'
+						}
+					}, 
+					u'label': u'General Features'
+				}
+			}
+		}, 
+	u'internalMemory': u'', 
+	u'imageKey': u'62/064', 
+	u'attributes': {
+		u'en_desc_rthree_text_right': u'This smart TV comes with LED backlight technology delivers brighter images with vibrant color compared to traditional TVs. You can simply plug your USB memory drive or HDD into the TV and instantaneously enjoy movies, photos or music.', 
+		u'color_family_en': u'black', 
+		u'en_desc_rone_title': u'Slim and VNB Bezel design', 
+		u'introduction': u'A new 40J5100 TV from Samsung comes with 40 inch Full HD LED display and it has a Screen Capture feature which lets you capture your favorite TV moments on the screen at the push of a button. This TV will take your movie watching experience to a whole new level.', 
+		u'model_number': u'40J5100', 
+		u'en_desc_rtwo_title': u'40 inch FHD Display', 
+		u'attribute_set': u'electronics', 
+		u'en_desc_rthree_title': u'Other Features', 
+		u'short_description': u'', 
+		u'en_desc_rtwo_text_right': u'This smart TV from Samsung comes with 40 inch FHD display, having resolution of 1920 x 1080 pixels which you can experience crystal-clear programming from your TV. It has a LED backlight technology which delivers brighter images with vibrant color compared to LCD TVs.', 
+		u'en_desc_rone_text_right': u'This smart TV comes with a slim and VNB bezel which is accompanied by a lustrous black 40inch screen that looks magnificent, irrespective of whether it is turned on or off. Its gorgeous design comes with slender dimensions of 889 x 508 x 50.8 mm and weight is 7.5 kg without stand.', 
+		u'hard_disk_type': u'HDD', 
+		u'model_name': u'Full HD Slim LED Television'
+	}, 
+	u'plpVisibility': 1
+}
