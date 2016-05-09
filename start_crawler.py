@@ -38,6 +38,20 @@ if __name__ == '__main__':
 
 	# parse --all csv
 	csv = args.csv
+
+	path = "data"
+	# if need to save scraped data with csv format.
+	if csv == True:
+		# create directory, if it's not existed.
+		if not os.path.exists(path):
+			os.mkdir(path)
+
+		csv_file = open("%s/data.csv" % (path), 'wb')
+	
+		temp = '"%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","Field1/Name","Field1/Value","Field2/Name","Field2/Value","Field3/Name","Field3/Value","Field4/Name","Field4/Value","Field5/Name","Field5/Value","Field6/Name","Field6/Value"\n' % ("Category1","Category2","Category3","Product Name", "Brand Name", "Product Url", "SKU/Product ID", "Domain", "Price", "Discounted Price", "Currency", "In Stock", "Image Url", "Category ID")
+
+		csv_file.write(temp)
+		csv_file.close()
 	
 	crawler = CrawlerProcess(get_project_settings())
 
@@ -49,10 +63,8 @@ if __name__ == '__main__':
 		crawler.crawl(NamshiSpider, all_products=all_products, csv=csv)
 	elif site_name == 'all':
 		crawler.crawl(SouqSpider, all_products=all_products, csv=csv)
-		crawler.start()
 		crawler.crawl(WadiSpider, all_products=all_products, csv=csv)
-		crawler.start()
-		crawler.crawl(NamshiSpider, all_products=all_products, csv=csv)
+		#crawler.crawl(NamshiSpider, all_products=all_products, csv=csv)
 	else:
 		print "Invalid site name. Please choose one of 'souq', 'wadi' and 'namshi'!"
 

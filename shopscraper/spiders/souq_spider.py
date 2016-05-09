@@ -126,7 +126,7 @@ class SouqSpider(scrapy.Spider):
 			page_size = response.meta['page_size']
 		
 		# *** scrape product name and product url from product tiles, save them into a list variable.
-		if page <= page_size:
+		if page <= 1:
 			products = response.xpath("//div[@id='content-body']//div[@class='placard']")
 			for product in products:
 
@@ -288,8 +288,8 @@ class SouqSpider(scrapy.Spider):
 
 		# get sku or product id
 		temp_id = self.check_dict_key(specs, 'Item EAN', item['product_url'])
-		if temp_id != "":
-			item['sku_product_id'] = temp_id
+		
+		item['sku_product_id'] = temp_id
 
 		# get product brand
 		item['brand_name'] = self.check_dict_key(specs, 'Brand', item['product_url'])
@@ -351,8 +351,7 @@ class SouqSpider(scrapy.Spider):
 		
 		temp_list = []
 		for field in extra_fields.keys():
-			if extra_fields[field] != u'':
-				temp_list.append({"name":field, "value":extra_fields[field]})
+			temp_list.append({"name":field, "value":extra_fields[field]})
 
 		item['additional_attributes'] = temp_list
 

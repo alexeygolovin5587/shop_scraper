@@ -2223,7 +2223,7 @@ db.category.insert(
 					url:"",
 					enable: 1
 		},
-		"additional_attributes":["Recomended Age"]
+		"additional_attributes":["Recommended Age"]
 	}
 );
 

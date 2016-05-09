@@ -104,13 +104,12 @@ class WadiSpider(scrapy.Spider):
 			
 		# *** scrape product name and product url from product tiles, save them into a list variable.
 		if self.page <= self.page_size:
-
+			
 			# get product data from javascript
 			data = response.body.split('window.pageData.push(')[1]
 			data = data.split('}});')[0] + "}}"
 
 			products = json.loads(data)
-
 
 			for product in products['data']:
 				
@@ -197,7 +196,7 @@ class WadiSpider(scrapy.Spider):
 		item = ShopscraperItem()
 
 		# get product name
-		item['product_name'] = product['name_desc']['name']#self.check_dict_key(product, 'name', 'name')
+		item['product_name'] = self.check_dict_key(product, 'name', 'name')
 		
 		# get product price
 		item['price'] =self.check_dict_key(product, 'price', 'wadi')
@@ -243,8 +242,9 @@ class WadiSpider(scrapy.Spider):
 
 		extra_fields = []
 		for extra_field in additional_attributes:
-			extra_fields.append({extra_field:self.get_additional_value(extra_field, item, product, category_url)})
+			extra_fields.append({"name":extra_field, "value":self.get_additional_value(extra_field, item, product, category_url)})
 
+		
 		item['additional_attributes'] = extra_fields
 
 		# run pipeline for saving all attributes of a product into database 

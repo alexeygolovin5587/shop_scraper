@@ -104,13 +104,12 @@ class WadiSpider(scrapy.Spider):
 			
 		# *** scrape product name and product url from product tiles, save them into a list variable.
 		if self.page <= self.page_size:
-
+			
 			# get product data from javascript
 			data = response.body.split('window.pageData.push(')[1]
 			data = data.split('}});')[0] + "}}"
 
 			products = json.loads(data)
-
 
 			for product in products['data']:
 				
@@ -197,7 +196,7 @@ class WadiSpider(scrapy.Spider):
 		item = ShopscraperItem()
 
 		# get product name
-		item['product_name'] = product['name_desc']['name']#self.check_dict_key(product, 'name', 'name')
+		item['product_name'] = self.check_dict_key(product, 'name', 'name')
 		
 		# get product price
 		item['price'] =self.check_dict_key(product, 'price', 'wadi')
@@ -245,7 +244,12 @@ class WadiSpider(scrapy.Spider):
 		for extra_field in additional_attributes:
 			extra_fields.append({extra_field:self.get_additional_value(extra_field, item, product, category_url)})
 
-		item['additional_attributes'] = extra_fields
+		temp_list = []
+		for field in extra_fields.keys():
+			if extra_fields[field] != u'':
+				temp_list.append({"name":field, "value":extra_fields[field]})
+
+		item['additional_attributes'] = temp_list
 
 		# run pipeline for saving all attributes of a product into database 
 		
@@ -321,7 +325,6 @@ class WadiSpider(scrapy.Spider):
 				return data['attributesMap']['groups']['Camera']['attributes']['screen_size_text']['value'].split(" ")[0] + " Inch"
 
 			if 'attributesMap' in data.keys() and 'groups' in data['attributesMap'].keys() and 'Display' in data['attributesMap']['groups'].keys() and 'attributes' in data['attributesMap']['groups']['Display'].keys() and 'screen_size_text' in data['attributesMap']['groups']['Display']['attributes'].keys() and 'value' in data['attributesMap']['groups']['Display']['attributes']['screen_size_text'].keys():
-				print data['attributesMap']['groups']['Display']['attributes']['screen_size_text']['value'].split(" ")[0] + " Inch"
 				return data['attributesMap']['groups']['Display']['attributes']['screen_size_text']['value'].split(" ")[0] + " Inch"
 
 		elif attr_name == "Type" or attr_name == "Accessory Type":

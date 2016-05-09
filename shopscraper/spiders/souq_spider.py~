@@ -351,8 +351,7 @@ class SouqSpider(scrapy.Spider):
 		
 		temp_list = []
 		for field in extra_fields.keys():
-			if extra_fields[field] != u'':
-				temp_list.append({"name":field, "value":extra_fields[field]})
+			temp_list.append({"name":field, "value":extra_fields[field]})
 
 		item['additional_attributes'] = temp_list
 
