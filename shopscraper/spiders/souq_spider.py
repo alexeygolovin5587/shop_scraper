@@ -126,7 +126,7 @@ class SouqSpider(scrapy.Spider):
 			page_size = response.meta['page_size']
 		
 		# *** scrape product name and product url from product tiles, save them into a list variable.
-		if page <= 1:
+		if page <= page_size:
 			products = response.xpath("//div[@id='content-body']//div[@class='placard']")
 			for product in products:
 
